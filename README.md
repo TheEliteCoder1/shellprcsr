@@ -6,3 +6,4 @@ shell.py executes commands via interpreter.py!
 Note:
 when commands work, fault handlers will still show
 This will be depreicated soon!
+I will be fixing the command that changes directories in the near future.
