@@ -1,5 +1,5 @@
 # Python_CommandLine:
-A cli made in Python.
+A cli made in the Python programming language.
 
 # Usage:
 1) Run the "shell.py" file.
@@ -17,4 +17,3 @@ For now, that command isn't working properly the way it should.
 Type "help()" for a list of commands and information on what those commands do.
 When you type in a command, DO NOT TYPE IN THE OPTIONAL PARAMETERS, they come after you type the command itself.
 For example, if you type "--file -a create [name] [extension] [folder]", only type in "--file -a create", the other parameters in the square brackets, are just notfying you about the corresponding prompts.
-
