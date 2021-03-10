@@ -1,7 +1,11 @@
-# Python_CommandLine
-A cli in Python.
-Run shell.py file.
-shell.py executes commands via interpreter.py!
+# Python_CommandLine:
+A cli made in Python.
+
+# Usage:
+1) Run the "shell.py" file.
+
+# Info:
+The "shell.py" file executes commands via the "interpreter.py" file!
 
 # Note:
 When commands work, fault handlers will still show.
