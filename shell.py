@@ -4,8 +4,6 @@ from interpreter import *
 from colorama import Fore, Back, Style
 import time
 import sys
-import numpy as np
-import cv2
 import psutil
 colorama.init(autoreset=True)
 
