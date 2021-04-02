@@ -115,8 +115,7 @@ def make_dir(new):
     print(f"new directory '{new}' has been made.")
 
 def info():
-    Shell_Look = f"shell__{dir_path}>"
-    print(f"This is a command line interface. '{Shell_Look}' is for multi-purpose use.")
+    print(f"This is a command line interface. '#shellprcsr~' is for multi-purpose use.")
 
 def move_file(file_path, new_file_path):
     try:
