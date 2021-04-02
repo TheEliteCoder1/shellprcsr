@@ -2,6 +2,7 @@ import os
 import shutil
 import colorama
 import time
+import keyboard
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
@@ -41,6 +42,12 @@ add_command(f"{ShellConfig['-h']} make dir [name]")
 add_command(f"{ShellConfig['--file -a']} del [path]")
 add_command(f"{ShellConfig['-h']} del dir [path]")
 add_command(f"{ShellConfig['-h']} cd dir [path]")
+add_command("-h camera")
+add_command("-h chk disk usg")
+add_command("-h shout [text]")
+add_command("-h virt memory prcs -s")
+add_command("--file -a write [path]")
+add_command("--file -a read [path]")
 # functions to call
 add_command("help()")
 
@@ -57,6 +64,12 @@ add_def(f"{ShellConfig['--file -a']} del [path]: deletes a file")
 add_def(f"{ShellConfig['-h']} del dir [path]: deletes a folder")
 add_def("help(): gives a description for each commands in the shell")
 add_def(f"{ShellConfig['-h']} cd dir [path]: changes current directory to specified path")
+add_def("-h camera: opens webcam, press 'q' to quit session")
+add_def("-h chk disk usg: gives statistics on the usage of your system's disk")
+add_def("-h shout [text]: echos some text to the screen")
+add_def("-h virt memory prcs -s: gives statistics on your virtual memory's processes")
+add_def("--file -a write [path]: writes to a file")
+add_def("--file -a read [path]: reads a file")
 
 '''
 Shell User Properties
@@ -137,4 +150,29 @@ def change_dir(path):
         os.getcwd(path)
     else:
         print(Fore.YELLOW + "This directory does not exist")
-        
+
+def write_file(path):
+    x = 0
+    width = os.get_terminal_size().columns
+    print(Back.CYAN + Fore.BLACK + "File Writer".center(width))
+    if os.path.exists(path):
+        with open(path, "a") as file:
+            while True:
+                x += 1
+                gnu = input(f"{x} ")
+                file.write(gnu)
+                file.write("\n")
+                if keyboard.is_pressed('q'):
+                    break
+    else:
+        print(Fore.YELLOW + "This path does not exist, please try again.")
+
+def read_file(path):
+    width = os.get_terminal_size().columns
+    print(Back.CYAN + Fore.BLACK + "File Reader".center(width))
+    if os.path.exists(path):
+        with open(path, "r") as file:
+            print(file.read())         
+    else:
+        print(Fore.YELLOW + "This path does not exist, please try again.")
+   
