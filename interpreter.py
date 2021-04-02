@@ -3,6 +3,8 @@ import shutil
 import colorama
 import time
 import keyboard
+import numpy as np
+import cv2
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
