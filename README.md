@@ -1,4 +1,4 @@
-# Python_CommandLine:
+# shellprcsr:
 A cli made in the Python programming language.
 
 # Usage:
