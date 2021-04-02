@@ -126,7 +126,7 @@ def move_file(file_path, new_file_path):
     
 def del_file(file_path):
     if os.path.exists(file_path):
-        os.remove(file_path)
+        shutil.rmtree(file_path)
         time.sleep(0.1)
         print(Fore.CYAN + "file successfully deleted (execution in 0.1 seconds)")
     else:
