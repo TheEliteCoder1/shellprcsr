@@ -17,3 +17,8 @@ When commands work, fault handlers will still show.
 This will be depreicated soon!
 I will be fixing the command that changes the current working directory(cd-like), in the near future.
 For now, that command isn't working properly the way it should.
+
+# Credits:
+Thanks to TechwithTim, I was able to create a simple OpenCV camera function.
+TechwithTim's github:
+https://github.com/techwithtim
