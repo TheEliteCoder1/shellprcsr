@@ -2,17 +2,19 @@ import colorama
 import interpreter
 from interpreter import *
 from colorama import Fore, Back, Style
+from foo import run
 import time
 import sys
 import psutil
 colorama.init(autoreset=True)
 
-Shell_Look = f"#shellprcsr~"
+Shell_Look = f"#shellprcsr@{dir_path}~"
+
 
 def Shell():
     while True:
         shell = input(Shell_Look)
-        
+
         if shell == "-h quit shell -s":
             print("Session ended...")
             sys.exit(0)
@@ -42,8 +44,9 @@ def Shell():
             new = input("folder name: ")
             make_dir(new)
         if shell == "--file -a del":
-            path_del = input("file path: ")
-            del_file(path_del)
+            print(Fore.RED + "- DEPRICATION WARNING, JUST USE '-h del dir'")
+            #path_del = input("file path: ")
+            # del_file(path_del)
         if shell == "-h del dir":
             folder_path_del = input("folder path: ")
             del_folder(folder_path_del)
@@ -69,6 +72,10 @@ def Shell():
         if shell == "--file -a read":
             uint = input("path to file: ")
             read_file(uint)
+        if shell == "-h --foo-printer":
+            run()
+            print(Fore.MAGENTA + Back.WHITE +
+                  "Thanks for playing foo printer!")
         # Command Line Exception Handlers/Minimum Length Arguments
         '''
         for command in command_list:
